@@ -23,7 +23,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    @category = Category.find(@post.category_id)
   end
 
   def destroy
