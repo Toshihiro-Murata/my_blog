@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.order('created_at DESC').all
+    @author = Author.find(1)
   end
 
   def new
