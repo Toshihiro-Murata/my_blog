@@ -6,8 +6,12 @@
     <%= f.text_field :title %>
   </p>
   <p>
+    カテゴリ：<br>
+    <%= f.text_field :category %>
+  </p>
+  <p>
     テキスト：<br>
-    <%= f.text_field :body %>
+    <%= f.text_area :body %>
   </p>
   <%= f.submit '登録する' %>
 <% end %>
