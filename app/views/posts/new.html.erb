@@ -1,6 +1,6 @@
 <h1>ブログ記事を書く</h1>
 
-<%= form_for @post, url: {:controller => :posts, :action => :create} do |f| -%>
+<%= form_for @post do |f| -%>
   <p>
     タイトル：<br>
     <%= f.text_field :title %>
