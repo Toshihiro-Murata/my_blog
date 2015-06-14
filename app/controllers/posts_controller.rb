@@ -23,6 +23,7 @@ class PostsController < ApplicationController
   end
 
   def show
+    @category = Category.find(@post.category_id)
   end
 
   def destroy
@@ -35,7 +36,7 @@ class PostsController < ApplicationController
   def post_params
     params.require(:post).permit(
       :title,
-      :category,
+      :category_id,
       :body
     )
   end
