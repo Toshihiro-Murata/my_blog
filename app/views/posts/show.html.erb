@@ -6,5 +6,5 @@
   <p><%= @post.body %></p>
 </p>
 <hr>
-<a href="/posts/<%= @post.id %>/edit">編集する</a>
-<a href="/posts/<%= @post.id %>/delete">削除する</a>
+<%= link_to "編集する", edit_post_path %>
+<%= link_to "削除する", post_path, method: :delete, data: { confirm: "削除しますか？" } %>
