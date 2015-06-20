@@ -1,4 +1,5 @@
 <div class="col-md-8">
+<%= paginate @posts %>
 <% @posts.each do |post| %>
   <div class="article">
     <h2><%= post.title %></h2>
@@ -8,6 +9,7 @@
   </div>
   <hr>
 <% end %>
+<%= paginate @posts %>
 </div>
 
 
