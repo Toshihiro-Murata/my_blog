@@ -1,4 +1,18 @@
 <div class="col-md-8">
+<%= search_form_for @q do |f| %>
+  <div class="row">
+    <div class="col-sm-3">
+      <%= f.label :title, "タイトル" %>
+      <%= f.search_field :title_cont, class: "form-control" %>
+    </div>
+    <div class="col-sm-3">
+      <%= f.label :body, "本文" %>
+      <%= f.search_field :title_start, class: "form-control" %>
+    </div>
+    <%= f.submit "検索", class: "btn btn-default" %>
+  </div>
+<% end %>
+
 <%= paginate @posts %>
 <% @posts.each do |post| %>
   <div class="article">
